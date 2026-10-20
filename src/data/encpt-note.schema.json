@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.edu/schemas/encpt-note.json",
+  "title": "eNCPT Clinical Note (ADIME)",
+  "type": "object",
+  "required": ["schemaVersion", "patient", "clinician", "date", "assessment", "diagnosis", "intervention", "monitoringEvaluation"],
+  "properties": {
+    "schemaVersion": { "const": "1.0" },
+    "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "clinician": { "type": "string", "minLength": 1 },
+    "patient": {
+      "type": "object",
+      "required": ["name", "mrn"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "mrn": { "type": "string", "minLength": 1 },
+        "age": { "type": "string" },
+        "sex": { "type": "string" }
+      }
+    },
+    "assessment": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["domain", "code", "term", "value"],
+        "properties": {
+          "domain": { "enum": ["FH", "AD", "BD", "PD", "CH"] },
+          "code": { "type": "string", "pattern": "^(FH|AD|BD|PD|CH)-\\d+(\\.\\d+)*$" },
+          "term": { "type": "string" },
+          "value": { "type": "string", "minLength": 1 },
+          "unit": { "type": "string" }
+        }
+      }
+    },
+    "diagnosis": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["code", "problem", "etiology", "signsSymptoms", "statement"],
+        "properties": {
+          "code": { "type": "string", "pattern": "^N(I|C|B)-\\d+\\.\\d+$" },
+          "problem": { "type": "string" },
+          "etiology": { "type": "string", "minLength": 1 },
+          "signsSymptoms": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+          "statement": { "type": "string" }
+        }
+      }
+    },
+    "intervention": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["category", "code", "term", "detail"],
+        "properties": {
+          "category": { "enum": ["ND", "E", "C", "RC"] },
+          "code": { "type": "string", "pattern": "^(ND|E|C|RC)-\\d+\\.\\d+$" },
+          "term": { "type": "string" },
+          "detail": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "monitoringEvaluation": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["domain", "code", "indicator", "target"],
+        "properties": {
+          "domain": { "enum": ["FH", "AD", "BD", "PD"] },
+          "code": { "type": "string" },
+          "indicator": { "type": "string" },
+          "target": { "type": "string", "minLength": 1 },
+          "current": { "type": "string" }
+        }
+      }
+    }
+  }
+}

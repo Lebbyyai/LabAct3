@@ -1,0 +1,74 @@
+{
+  "_note": "Illustrative subset for coursework. Verify codes/wording against the licensed eNCPT reference (Academy of Nutrition and Dietetics) before clinical use.",
+  "assessment": [
+    { "code": "FH", "name": "Food/Nutrition-Related History", "terms": [
+      { "code": "FH-1.1.1", "name": "Energy intake", "unit": "kcal/day" },
+      { "code": "FH-1.2.1", "name": "Food intake", "unit": "" },
+      { "code": "FH-2.1.1", "name": "Fluid/beverage intake", "unit": "mL/day" },
+      { "code": "FH-7.1.1", "name": "Physical activity", "unit": "min/day" }
+    ]},
+    { "code": "AD", "name": "Anthropometric Measurements", "terms": [
+      { "code": "AD-1.1.1", "name": "Height", "unit": "cm" },
+      { "code": "AD-1.1.2", "name": "Weight", "unit": "kg" },
+      { "code": "AD-1.1.5", "name": "Body mass index (BMI)", "unit": "kg/m²" },
+      { "code": "AD-1.1.4", "name": "Weight change", "unit": "kg" }
+    ]},
+    { "code": "BD", "name": "Biochemical Data, Medical Tests and Procedures", "terms": [
+      { "code": "BD-1.5.1", "name": "Glucose, fasting", "unit": "mg/dL" },
+      { "code": "BD-1.5.2", "name": "Hemoglobin A1c", "unit": "%" },
+      { "code": "BD-1.7.1", "name": "Total cholesterol", "unit": "mg/dL" },
+      { "code": "BD-1.2.1", "name": "Sodium", "unit": "mmol/L" }
+    ]},
+    { "code": "PD", "name": "Nutrition-Focused Physical Findings", "terms": [
+      { "code": "PD-1.1.1", "name": "Overall appearance", "unit": "" },
+      { "code": "PD-1.1.9", "name": "Vital signs", "unit": "" },
+      { "code": "PD-1.1.6", "name": "Muscle", "unit": "" }
+    ]},
+    { "code": "CH", "name": "Client History", "terms": [
+      { "code": "CH-2.1.1", "name": "Medical/health history", "unit": "" },
+      { "code": "CH-2.2.1", "name": "Medications", "unit": "" },
+      { "code": "CH-3.1.1", "name": "Social history", "unit": "" }
+    ]}
+  ],
+  "diagnosis": [
+    { "code": "NI", "name": "Intake", "terms": [
+      { "code": "NI-1.2", "name": "Inadequate energy intake" },
+      { "code": "NI-1.3", "name": "Excessive energy intake" },
+      { "code": "NI-2.1", "name": "Inadequate oral intake" },
+      { "code": "NI-5.1", "name": "Increased nutrient needs" }
+    ]},
+    { "code": "NC", "name": "Clinical", "terms": [
+      { "code": "NC-2.2", "name": "Altered nutrition-related laboratory values" },
+      { "code": "NC-3.1", "name": "Underweight" },
+      { "code": "NC-3.3", "name": "Overweight/obesity" },
+      { "code": "NC-1.1", "name": "Swallowing difficulty" }
+    ]},
+    { "code": "NB", "name": "Behavioral-Environmental", "terms": [
+      { "code": "NB-1.1", "name": "Food- and nutrition-related knowledge deficit" },
+      { "code": "NB-1.7", "name": "Undesirable food choices" },
+      { "code": "NB-2.1", "name": "Physical inactivity" }
+    ]}
+  ],
+  "intervention": [
+    { "code": "ND", "name": "Food and/or Nutrient Delivery", "terms": [
+      { "code": "ND-1.1", "name": "Meals and snacks" },
+      { "code": "ND-2.1", "name": "Enteral nutrition" },
+      { "code": "ND-3.1", "name": "Vitamin/mineral supplement" }
+    ]},
+    { "code": "E", "name": "Nutrition Education", "terms": [
+      { "code": "E-1.1", "name": "Nutrition education: purpose" },
+      { "code": "E-2.1", "name": "Nutrition education: initial/brief" },
+      { "code": "E-2.2", "name": "Nutrition education: comprehensive" }
+    ]},
+    { "code": "C", "name": "Nutrition Counseling", "terms": [
+      { "code": "C-1.1", "name": "Behavior theory/approach: motivational interviewing" },
+      { "code": "C-2.2", "name": "Strategy: goal setting" },
+      { "code": "C-2.3", "name": "Strategy: self-monitoring" }
+    ]},
+    { "code": "RC", "name": "Coordination of Nutrition Care", "terms": [
+      { "code": "RC-1.1", "name": "Team meeting" },
+      { "code": "RC-1.2", "name": "Referral to dietitian/other provider" },
+      { "code": "RC-1.3", "name": "Referral to community agency/program" }
+    ]}
+  ]
+}
